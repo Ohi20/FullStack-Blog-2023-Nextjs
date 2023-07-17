@@ -16,7 +16,7 @@ const HomePage = () => {
         </p>
 
         <div className="flex justify-evenly gap-4 my-8">
-          <Button url="/blog" text="See Our Blogs" />
+          <Button url="/blogs" text="See Our Blogs" />
           <Button url="/portfolio" text="See Our Works" />
         </div>
       </div>

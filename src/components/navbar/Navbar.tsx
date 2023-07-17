@@ -65,10 +65,10 @@ const Navbar = () => {
             Works
           </Link>
           <Link
-            href="/blog"
+            href="/blogs"
             className="block mt-4 lg:inline-block lg:mt-0 lg:text-xl mr-4"
           >
-            Blog
+            Blogs
           </Link>
           <Link
             href="/about"

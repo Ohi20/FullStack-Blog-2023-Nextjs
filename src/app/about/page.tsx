@@ -1,12 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
+import illustration from 'public/illustration.jpg';
+import Button from '@/src/components/button/Button';
 
 const About = () => {
   return (
     <div className="">
       <div className="w-full h-[300px] relative">
         <Image
-          src=""
+          src={illustration}
           fill={true}
           alt="About Hero"
           className="object-cover sepia"
@@ -39,7 +41,7 @@ const About = () => {
             do conversions, a boost in revenue, calls to action, inbound
             marketing, and improving customer relationships.
           </p>
-          <button>contact</button>
+          <Button url="/contact" text="Contact" />
         </div>
       </div>
     </div>

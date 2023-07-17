@@ -66,7 +66,7 @@ const EditBlog = ({ params }: { params: { id: string } }) => {
         id: params.id,
       });
       toast.success('Blog Posted Successfully', { id: '1' });
-      await router.push('/');
+      await router.push('/blogs');
     }
   };
 
@@ -74,7 +74,7 @@ const EditBlog = ({ params }: { params: { id: string } }) => {
     toast.loading('Deleting Blog', { id: '2' });
     await deleteBlog(params.id);
     toast.success('Blog Deleted', { id: '2' });
-    router.push('/');
+    router.push('/blogs');
   };
 
   return (

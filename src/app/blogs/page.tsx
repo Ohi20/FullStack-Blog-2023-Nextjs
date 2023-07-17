@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 async function fetchBlogs() {
   const res = await fetch('http://localhost:3000/api/blogs', {
     next: {
@@ -10,25 +8,15 @@ async function fetchBlogs() {
   return data.posts;
 }
 
-const Dashboard = async () => {
+const Blogs = async () => {
   const posts = await fetchBlogs();
-  console.log(posts);
 
   return (
     <main className="w-full h-full">
       <div className="md:w-2/4 sm:w-3/4 m-auto p-4 my-5 rounded-lg bg-slate-800 drop-shadow-xl">
         <h1 className="text-slate-200 text-center text-2xl font-extrabold font-[verdana]">
-          My FULL STACK Blog App With Next.js
+          Your Blogs
         </h1>
-      </div>
-      {/* Link */}
-      <div className="flex my-5">
-        <Link
-          href={'/blogs/add'}
-          className=" md:w-1/6 sm:w-2/4 text-center rounded-md p-2 m-auto bg-slate-200 font-semibold"
-        >
-          Add New Blog 🚀
-        </Link>
       </div>
       {/* Blogs */}
       <div className="w-full flex  flex-col justify-center items-center">
@@ -42,12 +30,6 @@ const Dashboard = async () => {
               <div className="mr-auto">
                 <h2 className="mr-auto font-semibold">{post.title}</h2>
               </div>
-              <Link
-                href={`/blogs/edit/${post.id}`}
-                className="px-4 py-1  text-center text-xl bg-slate-900 rounded-md font-semibold text-slate-200"
-              >
-                Edit
-              </Link>
             </div>
             {/* Date & Description */}
             <div className="mr-auto my-1">
@@ -65,4 +47,4 @@ const Dashboard = async () => {
   );
 };
 
-export default Dashboard;
+export default Blogs;
